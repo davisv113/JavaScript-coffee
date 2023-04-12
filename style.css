@@ -33,3 +33,10 @@ h1 {
 input:focus {
     outline: none
 }
+.creator{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
