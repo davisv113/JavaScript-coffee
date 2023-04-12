@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="icone-cafe.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Café Perfeito</title>
+  </head>
+  <body>
+    <h1>
+      Olá, bem vindo a fórmula do café perfeito!
+      <span class="material-symbols-outlined"> local_cafe </span>
+    </h1>
+    <div class="info">
+      <p>Importante => Você precisará de uma balança.</p>
+      <p>
+        Coloque a quantidade de água que te darei a quantidade correta de pó e
+        açúcar.
+      </p>
+    </div>
+    <div class="answer">
+      <div class="content">
+        <div class="input">
+          <label for="quantidade-agua">Quantidade de água(gramas ou ml):</label>
+          <input id="quantidade-agua" type="number" min="0" />
+        </div>
+        <div class="input">
+          <label for="quantidade-cafe">Quantidade de café(gramas):</label>
+          <input id="quantidade-cafe" type="number" readonly />
+        </div>
+        <div class="input">
+          <label for="quantidade-açucar">Quantidade de açúcar(gramas):</label>
+          <input id="quantidade-açucar" type="number" readonly />
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
