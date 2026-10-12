@@ -1,11 +1,9 @@
 import { Injectable, computed, signal } from '@angular/core';
 
-/** Gramas de pó de café por ml de água (fórmula original do Guilherme). */
-const CAFE_POR_ML = 0.0973;
-/** Gramas de açúcar por ml de água. */
-const ACUCAR_POR_ML = 0.125;
-/** Ajuste da fórmula v2: sempre 15 g a menos de açúcar no resultado. */
-const AJUSTE_ACUCAR = 15;
+/** Pó de café: 10% da água. */
+const CAFE_POR_ML = 0.1;
+/** Açúcar: 8% da água. */
+const ACUCAR_POR_ML = 0.08;
 
 /** Capacidade da garrafa na cena 3D, usada só para a animação de nível. */
 export const CAPACIDADE_GARRAFA_ML = 1500;
@@ -15,7 +13,7 @@ export function calcularCafe(agua: number): number {
 }
 
 export function calcularAcucar(agua: number): number {
-  return agua > 0 ? Math.max(0, agua * ACUCAR_POR_ML - AJUSTE_ACUCAR) : 0;
+  return agua > 0 ? agua * ACUCAR_POR_ML : 0;
 }
 
 @Injectable({ providedIn: 'root' })

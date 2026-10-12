@@ -2,10 +2,10 @@
 A fórmula do café perfeito segundo meu pai Guilherme
 https://davisv113.github.io/JavaScript-coffee/
 
-## A fórmula (v2)
+## A fórmula
 
-- **Pó de café:** água × 0,0973
-- **Açúcar:** água × 0,125 − 15 g
+- **Pó de café:** 10% da água
+- **Açúcar:** 8% da água
 
 ## Rodando local
 
