@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100svh;
+  width: 100%;
   max-width: 1100px;
   margin: 0 auto;
   padding: 12px 16px 16px;
@@ -51,6 +52,8 @@ h1 {
 .layout {
   flex: 1;
   display: grid;
+  /* minmax(0, ...) trava a largura: sem isso a coluna cresce junto com o conteúdo */
+  grid-template-columns: minmax(0, 1fr);
   grid-template-rows: minmax(240px, 40svh) auto;
   gap: 12px;
 }
@@ -125,6 +128,7 @@ h1 {
 
 input {
   flex: 1;
+  width: 100%;
   min-width: 0;
   padding: 6px 14px;
   border: 0;
@@ -153,11 +157,12 @@ input[type='number'] {
 
 .resultados {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
 }
 
 .resultado {
+  min-width: 0;
   display: flex;
   flex-direction: column;
   padding: 12px 14px;
@@ -171,7 +176,8 @@ input[type='number'] {
 }
 
 .valor {
-  font-size: 1.7rem;
+  font-size: clamp(1.25rem, 6vw, 1.7rem);
+  overflow-wrap: anywhere;
   font-weight: 700;
   color: var(--cafe);
   font-variant-numeric: tabular-nums;
@@ -218,7 +224,7 @@ input[type='number'] {
 
 @media (min-width: 860px) {
   .layout {
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
     grid-template-rows: minmax(520px, 1fr);
   }
 

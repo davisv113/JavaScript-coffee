@@ -45,6 +45,7 @@ body {
   color: var(--texto);
   transition: background-color 0.3s, color 0.3s;
   -webkit-tap-highlight-color: transparent;
+  overflow-x: clip;
 }
 
 button,
