@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <title>Café Perfeito</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="A fórmula do café perfeito segundo Guilherme Vaz Vieira." />
+    <meta name="theme-color" content="#f6efe6" />
+    <link rel="icon" type="image/png" href="icone-cafe.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Changa:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      // Aplica o tema antes do Angular subir, pra não piscar
+      try {
+        var t = localStorage.getItem('cafe-perfeito:tema');
+        var escuro = t ? t === 'escuro' : matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.dataset.theme = escuro ? 'dark' : 'light';
+      } catch (e) {}
+    </script>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  </head>
+  <body>
+    <app-root></app-root>
+    <noscript>Ative o JavaScript para usar o Café Perfeito.</noscript>
+  </body>
+</html>

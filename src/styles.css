@@ -1,0 +1,54 @@
+:root {
+  --fundo: #f6efe6;
+  --fundo-cena-1: #fbe9d2;
+  --fundo-cena-2: #f1d5b4;
+  --cartao: #fffaf4;
+  --texto: #2b1d14;
+  --texto-suave: #7a6355;
+  --borda: #e6d6c4;
+  --destaque: #8b4a2b;
+  --destaque-texto: #fffaf4;
+  --cafe: #4a2a17;
+  --sombra: 0 10px 30px rgb(74 42 23 / 0.12);
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --fundo: #1a1310;
+  --fundo-cena-1: #2b2030;
+  --fundo-cena-2: #18121c;
+  --cartao: #251b16;
+  --texto: #f3e7da;
+  --texto-suave: #b59f8d;
+  --borda: #3a2c24;
+  --destaque: #e0a46f;
+  --destaque-texto: #1a1310;
+  --cafe: #e8c39e;
+  --sombra: 0 10px 30px rgb(0 0 0 / 0.35);
+  color-scheme: dark;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Changa', system-ui, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  transition: background-color 0.3s, color 0.3s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}

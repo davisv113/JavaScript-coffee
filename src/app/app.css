@@ -1,0 +1,228 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 16px 16px;
+  gap: 12px;
+}
+
+svg {
+  width: 1.4em;
+  height: 1.4em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.xicara {
+  color: var(--destaque);
+}
+
+.icone {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--borda);
+  border-radius: 50%;
+  background: var(--cartao);
+  cursor: pointer;
+}
+
+.layout {
+  flex: 1;
+  display: grid;
+  grid-template-rows: minmax(240px, 40svh) auto;
+  gap: 12px;
+}
+
+.cena {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: radial-gradient(circle at 30% 20%, var(--fundo-cena-1), var(--fundo-cena-2));
+  box-shadow: var(--sombra);
+}
+
+.cena-vazia {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  padding: 24px;
+  text-align: center;
+  color: var(--texto-suave);
+}
+
+.dica {
+  position: absolute;
+  bottom: 10px;
+  right: 14px;
+  font-size: 0.75rem;
+  color: var(--texto-suave);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.cartao {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--borda);
+  border-radius: 20px;
+  background: var(--cartao);
+  box-shadow: var(--sombra);
+}
+
+.info,
+.versao {
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+}
+
+.versao {
+  font-size: 0.8rem;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.entrada {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--borda);
+  border-radius: 14px;
+  background: var(--fundo);
+  transition: border-color 0.2s;
+}
+
+.entrada:focus-within {
+  border-color: var(--destaque);
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 6px 14px;
+  border: 0;
+  background: transparent;
+  font-size: 1.8rem;
+  font-weight: 600;
+  outline: none;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.unidade {
+  padding-right: 14px;
+  color: var(--texto-suave);
+  white-space: nowrap;
+}
+
+.resultados {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.resultado {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--fundo);
+}
+
+.rotulo {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+}
+
+.valor {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--cafe);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+}
+
+.valor small {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.compartilhar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  border: 0;
+  border-radius: 14px;
+  background: var(--destaque);
+  color: var(--destaque-texto);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.compartilhar svg {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.aviso {
+  min-height: 1.2em;
+  margin-top: -8px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+}
+
+.homenagem {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+}
+
+@media (min-width: 860px) {
+  .layout {
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: minmax(520px, 1fr);
+  }
+
+  .cartao {
+    justify-content: center;
+  }
+}
